@@ -179,7 +179,7 @@ nav #navbar {
         opacity: 1; }
       nav #navbar li a:hover {
         opacity: 1; }
-nav #ham_btn, nav #phone_btn, nav #ham_menu, nav #phone_menu {
+nav #ham_btn, nav #ham_menu {
   display: none; }
 
 /* RESPONSIVE */

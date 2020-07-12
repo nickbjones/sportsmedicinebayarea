@@ -9,8 +9,5 @@
 	<?php endforeach ?>
 </ul>
 <div id="phone_btn">
-	<img src="<?= site()->url() ?>/assets/images/Telephone.png" alt="Call Icon">
+	<a href="tel:<?= page('contact')->phone() ?>"><img src="<?= site()->url() ?>/assets/images/Telephone.png" alt="Call Icon"></a>
 </div>
-<ul id="phone_menu">
-	<li><a href="tel:<?= page('contact')->phone() ?>"><?= page('contact')->phone() ?></a></li>
-</ul>
