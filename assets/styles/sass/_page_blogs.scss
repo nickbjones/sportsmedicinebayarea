@@ -1,0 +1,78 @@
+/* IN THE NEWS & PATIENT EDUCATION PAGES */
+$border-rad: 4px;
+main section.subpg {
+	max-width: 840px;
+	margin: 0px auto;
+	padding: 20px 0;
+	border-bottom: 0;
+}
+.post {
+	margin-bottom: 30px;
+	background-color: #fff;
+	border-radius: 0 0 $border-rad $border-rad;
+	box-shadow: 0 4px 16px #ddd;
+	padding: 0;
+	.post_header {
+		border-radius: $border-rad $border-rad 0 0;
+		padding: 10px 20px;
+		background-color: $accent-color;
+		color: #eee;
+		h3, 
+		p {
+			margin: 0;
+			color: #fff;
+		}
+		p {
+			font-style: italic;
+		}
+	}
+	.post_body {
+		padding: 10px 20px 10px;
+		figure {
+			text-align: center;
+			&.video {
+				margin: 15px 0;
+				iframe {
+					min-width: 240px;
+					width: 100%;
+					max-width: 400px;
+					height: 225px;
+				}
+			}
+		}
+	}
+		ul, 
+		ol {
+			margin-left: 50px;
+		}
+		p {
+			margin: 10px 0;
+			text-indent: 30px;
+		}
+		hr {
+			margin: 20px 0;
+		}
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 640px) {
+	section.profile {
+		padding: 20px 0;
+		text-align: center;
+		.flex_container {
+			@include flex_wrap(wrap);
+		}
+		.left, .right {
+			display: block;
+			margin: 0 auto !important;
+		}
+		.right {
+			padding: 20px;
+			text-align: left;
+		}
+	}
+	main.profile section h2 {
+		padding: 0 10px;
+	}
+}

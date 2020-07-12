@@ -1,0 +1,139 @@
+/* BASE STYLES AND RESETS */
+$accent-color: #5C6BC0;
+$bg-color: #5F6061;
+$std-margin: 20px;
+
+* {
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	color: #404040;
+	font-family: "lato";
+	font-weight: 400;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+}
+.in_blk {
+	display: inline-block;
+	vertical-align: top;
+}
+.clear {
+	clear: both;
+}
+a { color: $accent-color; }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { opacity: 1; }
+a:active { text-decoration: none; }
+.container {
+	max-width: 800px;
+}
+body {
+	background-color: $bg-color;
+}
+
+/* older browser support for flex box */
+@mixin display_flex() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+@mixin flex_order($order) {
+	-webkit-box-ordinal-group: $order;  
+	-moz-box-ordinal-group: $order;     
+	-ms-flex-order: $order;     
+	-webkit-order: $order;  
+	order: $order;
+}
+@mixin flex_wrap($wrap) {
+	-webkit-flex-wrap: $wrap;
+	-moz-flex-wrap: $wrap;
+	-ms-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+}
+@mixin flex_direction($direction) {
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+@mixin flex_grow($grow) {
+	-webkit-flex-grow: $grow;
+	-moz-flex-grow: $grow;
+	-ms-flex-grow: $grow;
+	flex-grow: $grow;
+}
+@mixin justify_content($justify) {
+	-webkit-box-pack: $justify;
+	-ms-flex-pack: $justify;
+	justify-content: $justify;
+}
+
+
+/* MAIN STYLES */
+main {
+	display: block; /* IE fix */
+	min-height: 440px;
+	background-color: #eee;
+	padding: 0 20px;
+	#main {
+		margin-top: -126px;
+	}
+	section {
+		width: 100%;
+		max-width: 840px;
+		margin: 25px auto;
+		border-bottom: 1px solid #ccc;
+		* {
+			line-height: 1.5;
+		}
+		h2 {
+			margin: 20px 0;
+		}
+		img {
+			max-width: 100%;
+		}
+		.title {
+			width: 25%;
+			h2 {
+				margin: 0;
+				font-size: 40px;
+				font-weight: 300;
+				color: #000;
+			}
+		}
+		.text {
+			width: 70%;
+			font-size: 18px;
+		}
+		& > div {
+			padding: 50px;
+		}
+	}
+
+	&.physical_therapists, 
+	&.physicians {
+		.subpg {
+			/*width: (840px + 2 * 19px);*/
+			h2 {
+				@media (min-width: 768px) {
+					margin-left: 19px;
+				}
+			}
+			.flex_container {
+				@include display_flex();
+				@include flex_wrap(wrap);
+				@include justify_content(center);
+				align-content: space-between;
+				padding: 0;
+				& > * {
+					/*margin-left: auto;*/
+					/*margin-right: auto;*/
+				}
+			}
+		}
+	}
+}

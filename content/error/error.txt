@@ -1,0 +1,5 @@
+Title: 404 Error
+
+----
+
+Text: Sorry, the page cannot been found.

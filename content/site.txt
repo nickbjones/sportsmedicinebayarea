@@ -1,0 +1,17 @@
+Title: Center for Sports Medicine
+
+----
+
+Author: Nick Jones
+
+----
+
+Description: This website is built with Kirby CMS.
+
+----
+
+Keywords: Kirby,CMS,file-based
+
+----
+
+Copyright: Copyright © 2015-(date: Year)

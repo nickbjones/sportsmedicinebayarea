@@ -1,0 +1,247 @@
+/* HOME PAGE STYLES */
+main.home {
+	padding: 0;
+	#hero {
+		position: relative;
+		height: 500px;
+		overflow: hidden;
+		div[class^="slide"] {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		.slide0 { opacity: 1; }
+		.slide1 { opacity: 0; }
+		.slide2 { opacity: 0; }
+			img {
+				bottom: 0;
+				width: 100%;
+			}
+			p {
+				position: absolute;
+				width: 500px;
+				font-size: 32px;
+				font-weight: 300;
+				text-align: right;
+				color: #222;
+			}
+			.msg0 {  /* "Industry Leading Physicians Healing Patients" */
+				top: 5%;
+				left: 5%;
+				text-align: left;
+			}
+			.msg1 {  /* "Getting Athletes Back in Thier Game" */
+				top: 35%;
+				right: 5%;
+				color: #fff;
+			}
+			.msg2 {  /* "Located in the San Francisco Bay Area" */
+				top: 5%;
+				right: 5%;
+			}
+	}
+	#main {
+		padding-bottom: 15px;
+		section {
+			&.intro, 
+			&.locations, 
+			&.associations {
+				background-color: #fefefe;
+			}
+			&.intro {
+				position: relative;
+			}
+			&.locations {
+				position: relative;
+				.location {
+					text-align: center;
+					width: 49%;
+				}
+			}
+			&.associations {
+				text-align: center;
+				padding-top: 15px;
+				a {
+					display: inline-block;
+					margin: 0 10px;
+					overflow: hidden;
+					opacity: 1;
+					color: transparent;
+					&:hover {
+						opacity: 0.8;
+					}
+					img {
+						height: 80px;
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+	main.home #hero {
+		height: 400px;
+	}
+}
+
+@media (max-width: 840px) {
+	main {
+		section {
+			margin: 0;
+			> div {
+				padding: 40px;
+			}
+			.title, 
+			.text {
+				display: block;
+				width: 100%;
+				color: red !important;
+			}
+		}
+		&.home #main {
+			padding-bottom: 0px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	main {
+		section > div {
+			padding: 30px;
+		}
+		h1 a {
+			font-size: 22px;
+		}
+		nav {
+			margin-top: 0;
+		}
+		.associations a {
+			margin-top: 15px;
+		}
+		section.subpg {
+			text-align: center;
+			padding-left: 0;
+			padding-right: 0;
+			h2 {
+				text-align: center;
+				margin-top: 0;
+			}
+			.post, .person {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.post {
+				text-align: left;
+			}
+		}
+		section.contact {
+			display: block;
+			width: 100%;
+			padding-top: 20px;
+		}
+	}
+}
+
+@media (max-width: 717px) {
+	main {
+		section > div {
+			padding: 20px;
+		}
+		.associations {
+			.assn a {
+				height: 100px;
+				line-height: 100px;
+				padding: 0 10px;
+			}
+			a img {
+				height: 60px;
+			}
+		}
+	}
+}
+
+@media (max-width: 668px) {
+	main {
+		&.home #hero {
+			p {
+				font-weight: normal;
+			}
+		}
+		section {
+			.title h2 {
+				font-size: 36px;
+			}
+			.text {
+				font-size: 16px;
+			}
+			&.locations {
+				padding-bottom: 20px;
+				.location {
+					margin: 0 auto;
+				}
+				.location h2 {
+					margin-bottom: 6px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	main.home #main {
+		section.locations {
+			.location {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 570px) {
+	main.home {
+		#hero {
+			height: 300px;
+			p {
+				font-size: 22px;
+			}
+		}
+		.associations .assn a {
+			padding: 0;
+		}
+	}
+}
+
+@media (max-width: 467px) {
+	main.home {
+		#hero {
+			height: 266px;
+			p {
+				font-size: 16px;
+			}
+		}
+		section {
+			.title h2 {
+				font-size: 32px;
+			}
+			.text {
+				font-size: 14px;
+			}
+		}
+		.associations .assn a {
+			height: 70px;
+			line-height: 70px;
+		}
+	}
+}
+
+@media (max-width: 388px) {
+	main.home #hero {
+		height: 253px;
+	}
+}
