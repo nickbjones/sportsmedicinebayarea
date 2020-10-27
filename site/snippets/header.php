@@ -26,16 +26,22 @@
 	<header role="banner">
 		<div class="banner">
 			<div class="in_blk left">
-				<img src="<?= site()->url() ?>/assets/images/logos/figs.jpg" alt="Saint Francis Memorial Hospital Figures Logo">
-				<h1><a href="<?= site()->url() ?>" title="Center for Sports Medicine home page">Center for Sports Medicine</a></h1>
+				<a class="overlay" href="<?= site()->url() ?>" title="Center for Sports Medicine home page">
+					<h1 class="h1">Center for Sports Medicine</h1>
+					<p class="subtitle">(Orthopedic and Sports Medicine Institute)</p>
+				</a>
 			</div>
 			<div class="in_blk right">
 				<span class="header-phone"><?= page('contact')->phone() ?></span>
 			</div>
 		</div>
-		<nav role="navigation">
-			<a href="<?= site()->url() ?>" title="Center for Sports Medicine home page" class="img_wrapper"><img src="<?= site()->url() ?>/assets/images/logos/figs.jpg" alt="Saint Francis Memorial Hospital Figures Logo"></a>
-			<a href="<?= site()->url() ?>" title="Center for Sports Medicine home page" class="tit_wrapper">Center for Sports Medicine</a>
+		<nav class="navigation" role="navigation">
+			<div class="title">
+				<a class="overlay" href="<?= site()->url() ?>" title="Center for Sports Medicine home page">
+					<h1 class="h1">Center for Sports Medicine</h1>
+					<p class="subtitle">(Orthopedic and Sports Medicine Institute)</p>
+				</a>
+			</div>
 			<ul id="navbar">
 				<?php foreach($pages->visible() as $p): ?>
 					<li><a <?= ($p->isOpen()) ? 'class="active"' : '' ?> href="<?= $p->url() ?>"><?= html($p->title()) ?></a></li>

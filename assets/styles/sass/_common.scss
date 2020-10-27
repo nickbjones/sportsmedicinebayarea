@@ -41,6 +41,11 @@ body {
 	display: -webkit-flex;
 	display: flex;
 }
+@mixin flex($grow, $shrink, $basis) {
+	-webkit-box-flex: $grow;
+	-ms-flex: $grow $shrink $basis;
+			flex: $grow $shrink $basis;
+}
 @mixin flex_order($order) {
 	-webkit-box-ordinal-group: $order;  
 	-moz-box-ordinal-group: $order;     
@@ -70,6 +75,31 @@ body {
 	-webkit-box-pack: $justify;
 	-ms-flex-pack: $justify;
 	justify-content: $justify;
+}
+@mixin align_items($align) {
+	-webkit-box-align: $align;
+	-ms-flex-align: $align;
+	align-items: $align;
+}
+@mixin flex_direction($direction) {
+	@if $direction == column {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+	}
+	@if $direction == column-reverse {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+	}
+	@if $direction == row {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+	}
+	@if $direction == row-reverse {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+	}
+		-ms-flex-direction: $direction;
+			flex-direction: $direction;
 }
 
 

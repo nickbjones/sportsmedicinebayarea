@@ -18,6 +18,9 @@
 			</div>
 			<div class="in_blk right"><?= $page->bio()->kirbytext() ?></div>
 		</div>
+
+		<?php if($page->slug() == 'meredith-bean') { snippet('zocdoc-button'); } ?>
+
 	</section>
 </main>
 <?php snippet('footer') ?>

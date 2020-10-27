@@ -1,3 +1,9 @@
+# Run SASS
+
+sass assets/styles/sass/styles.scss assets/styles/css/styles.css
+
+
+
 # Kirby
 
 Kirby is a file-based CMS.

@@ -38,9 +38,9 @@ section.profile {
 	margin-bottom: 5vw;
 	margin-right: 30px;
 	background-color: #fff;
-	-webkit-box-shadow: 0 4px 16px #888;
-	-moz-box-shadow: 0 4px 16px #888;
-	box-shadow: 0 4px 16px #888;
+	-webkit-box-shadow: 0 2px 12px #bbb;
+	-moz-box-shadow: 0 2px 12px #bbb;
+	box-shadow: 0 2px 12px #bbb;
 	opacity: 1;
 	@media (max-width: 523px) {
 		margin-right: 0;
@@ -50,6 +50,9 @@ section.profile {
 		margin: 0;
 	}
 	.profile_snippet_header {
+		@include display_flex();
+		@include justify_content(center);
+		@include flex_direction(column);
 		height: 73px;
 		padding: 10px 20px;
 		text-align: center;
@@ -58,7 +61,11 @@ section.profile {
 			color: #eee;
 		}
 		h4 {
+			@include flex(0, 1, auto);
 			font-size: 18px;
+		}
+		p {
+			@include flex(0, 1, auto);
 		}
 	}
 	.profile_snippet_img {
@@ -180,4 +187,11 @@ section.profile {
 			border-radius: 10px;
 		}
 	}
+}
+
+// zocdoc button for Meredith Bean
+#zocdoc-button {
+	height: 0;
+	padding: 0;
+	visibility: hidden;
 }

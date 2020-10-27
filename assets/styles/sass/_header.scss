@@ -12,7 +12,7 @@ header {
 		opacity: 0.6;
 	}
 }
-.banner, nav {
+.banner, .navigation {
 	position: relative;
 	max-width: 840px;
 	margin: auto;
@@ -20,27 +20,34 @@ header {
 }
 .banner {
 	font-size: 0;
-	div {
+	& > div {
 		&.left {
 			position: relative;
 			min-width: 332px;
 			height: 77px;
-			img {
-				height: 65px;
-				left: 90px;
-				top: 7px;
-				position: relative;
-				opacity: 0.2;
-			}
-			h1 {
+			background-image: url('/assets/images/logos/figs.jpg');
+			background-position: top 7px center;
+			background-size: 45.5%;
+			background-repeat: no-repeat;
+			.overlay {
+				background-color: rgba(255, 255, 255, 0.8);
 				position: absolute;
-				top: 20px;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				@include display_flex();
+				@include justify_content(center);
+				@include align_items(center);
+				@include flex_direction(column);
+			}
+			.h1 {
+				@include flex(0, 1, auto);
 				font-size: 28px;
-				margin: 10px 0 10px 0;
-				a {
-					opacity: 1;
-					color: black;
-				}
+			}
+			.subtitle {
+				@include flex(0, 1, auto);
+				font-size: 16px;
 			}
 		}
 		&.right {
@@ -64,7 +71,7 @@ header {
 		}
 	}
 }
-nav {
+.navigation {
 	& > .tit_wrapper, & > .img_wrapper {
 		display: none;
 	}
@@ -73,7 +80,7 @@ nav {
 		padding: 7px 0;
 		text-transform: uppercase;
 		li {
-			@include flex_grow(1);
+			@include flex(1, 1, auto);
 			display: inline-block;
 			padding: 0 10px; /* for IE9 */
 			font-size: 0;
@@ -94,13 +101,17 @@ nav {
 			}
 		}
 	}
-	#ham_btn, #ham_menu {
+	#ham_btn, #ham_menu, #phone_btn {
 		display: none;
 	}
 }
 
 /* RESPONSIVE */
-
+@media (min-width: 768px) {
+	.navigation {
+		display: none;
+	}
+}
 @media (max-width: 767px) {
 	header {
 		height: auto;
@@ -108,11 +119,12 @@ nav {
 			display: none;
 		}
 	}
-	nav {
+	.navigation {
 		width: auto;
-		padding: 18px 22px;
+		padding: 0 22px;
 		text-align: center;
 		position: relative;
+		padding: 4px 16px 0 16px;
 		& .img_wrapper {
 			position: absolute;
 			display: block;
@@ -136,6 +148,30 @@ nav {
 			font-family: "lato";
 			color: #404040;
 			text-transform: none;
+		}
+		.title {
+			display: inline-block;
+			background-image: url('/assets/images/logos/figs.jpg');
+			background-position: top center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.overlay {
+			background-color: rgba(255, 255, 255, 0.8);
+			width: 100%;
+			height: 100%;
+			@include display_flex();
+			@include justify_content(center);
+			@include align_items(center);
+			@include flex_direction(column);
+		}
+		.h1 {
+			@include flex(0, 1, auto);
+			font-size: 19px;
+		}
+		.subtitle {
+			@include flex(0, 1, auto);
+			font-size: 12px;
 		}
 		#navbar {
 			display: none;
@@ -162,7 +198,7 @@ nav {
 		}
 		#phone_btn {
 			float: right;
-			padding: 5px 6px;
+			padding: 6px;
 			img {
 				width: 28px;
 			}
@@ -171,9 +207,9 @@ nav {
 			display: none;
 			position: absolute;
 			z-index: 1;
-			top: 76px;
-			background-color: white;
-			box-shadow: 0px 10px 10px #333;
+			top: 50px;
+			background-color: #fff;
+			box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
 			list-style-type: none;
 			li {
 				padding: 10px 0;
@@ -220,8 +256,8 @@ nav {
 }
 
 @media only screen and (max-device-width: 543px) {
-	nav {
-		padding: 18px 16px;
+	.navigation {
+		padding: 4px 16px 0 16px;
 		& > .tit_wrapper {
 			font-size: 22px;
 			margin-top: 5px;
@@ -230,10 +266,10 @@ nav {
 }
 
 @media only screen and (max-device-height: 479px) {
-	nav #ham_menu, nav #phone_menu {
+	.navigation #ham_menu, .navigation #phone_menu {
 		top: 49px;
 	}
-	nav #ham_menu {
+	.navigation #ham_menu {
 		li, li ul li {
 			padding: 6.5px 0;
 		}
@@ -241,14 +277,13 @@ nav {
 }
 
 @media only screen and (max-device-width: 388px) {
-	nav {
-		padding: 8px 6px;
+	.navigation {
+		padding: 4px 6px;
 		& > .tit_wrapper {
 			font-size: 19px;
 			margin-top: 3px;
 		}
 		#ham_btn {
-			padding: 8px 7px;
 			.ham_bar {
 				width: 17px;
 				& + .ham_bar {
@@ -257,27 +292,26 @@ nav {
 			}
 		}
 		#phone_btn {
-			padding: 3px 4px;
 			img {
 				width: 22px;
 			}
 		}
 		#ham_menu, #phone_menu {
-			top: 46px;
+			top: 49px;
 		}
 	}
 }
 
 /* iPhone 4 & 5 */
 @media only screen and (max-device-height: 388px) {
-	nav {
-		padding: 8px 6px;
+	.navigation {
+		padding: 4px 6px;
 	}
 }
 
 /* smaller scrn sizes */
 @media only screen and (max-device-width: 319px) {
-	nav > a {
+	.navigation > a {
 		font-size: 15px;
 	}
 }
