@@ -28,7 +28,7 @@
 			<div class="in_blk left">
 				<a class="overlay" href="<?= site()->url() ?>" title="Center for Sports Medicine home page">
 					<h1 class="h1">Center for Sports Medicine</h1>
-					<p class="subtitle">(Orthopedic and Sports Medicine Institute)</p>
+					<p class="subtitle">Saint Francis Orthopedic and Sports Medicine Institute</p>
 				</a>
 			</div>
 			<div class="in_blk right">
@@ -39,7 +39,7 @@
 			<div class="title">
 				<a class="overlay" href="<?= site()->url() ?>" title="Center for Sports Medicine home page">
 					<h1 class="h1">Center for Sports Medicine</h1>
-					<p class="subtitle">(Orthopedic and Sports Medicine Institute)</p>
+					<p class="subtitle">Saint Francis Orthopedic and Sports Medicine Institute</p>
 				</a>
 			</div>
 			<ul id="navbar">

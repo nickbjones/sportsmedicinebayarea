@@ -47,7 +47,7 @@ header {
 			}
 			.subtitle {
 				@include flex(0, 1, auto);
-				font-size: 16px;
+				font-size: 13px;
 			}
 		}
 		&.right {
@@ -171,7 +171,7 @@ header {
 		}
 		.subtitle {
 			@include flex(0, 1, auto);
-			font-size: 12px;
+			font-size: 9px;
 		}
 		#navbar {
 			display: none;

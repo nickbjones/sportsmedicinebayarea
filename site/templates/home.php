@@ -10,8 +10,8 @@
 			<p class="msg1">Getting Athletes<br>Back in Their Game</p>
 		</div>
 		<div class="slide2">
-			<img src="assets/images/heroes/2.png" alt="Located in the San Francisco Bay Area Welcome Image">
-			<p class="msg2">Located in the San<br>Francisco Bay Area</p>
+			<img src="assets/images/heroes/2.png" alt="Located in San Francisco at Saint Francis Memorial Hospital Welcome Image">
+			<p class="msg2">Located in San Francisco<br>at Saint Francis Memorial Hospital</p>
 		</div>
 		<?= js('assets/js/hero_slide.js') ?>
 	</div>

@@ -189,7 +189,7 @@ header li a:hover {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  font-size: 16px;
+  font-size: 13px;
 }
 .banner > div.right {
   text-align: right;
@@ -333,7 +333,7 @@ header li a:hover {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    font-size: 12px;
+    font-size: 9px;
   }
   .navigation #navbar {
     display: none;
@@ -578,7 +578,7 @@ main.home #hero .msg1 {
   color: #fff;
 }
 main.home #hero .msg2 {
-  /* "Located in the San Francisco Bay Area" */
+  /* "Located in San Francisco at Saint Francis Memorial Hospital" */
   top: 5%;
   right: 5%;
 }
